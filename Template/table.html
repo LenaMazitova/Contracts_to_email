@@ -1,0 +1,29 @@
+html> 
+    <head>
+        <meta charset="'UTF-8">
+        <link rel="stylesheet" type='text/css' href="style.css">
+        <title>HTML TABLE</title>
+    </head>
+        <body>
+            <h2>List of government contracts</h2>
+            <table style="width:100%;">
+                <tr>
+                    <th>Registration number</th>
+                    <th>Customer's name</th>
+                    <th>Supplier</th>
+                    <th>Total price, RUB</th>
+                </tr>
+
+                {% for item in items %}
+
+                <tr>
+                    <td>{{ item['num_reg'] }}</td>
+                    <td>{{ item['customer_name'] }}</td>
+                    <td>{{ item['suppliers_data'] }}</td>
+                    <td>{{ item['price'] }}</td>
+                </tr>
+                {% endfor %}
+                
+            </table>
+        </body>
+</html>

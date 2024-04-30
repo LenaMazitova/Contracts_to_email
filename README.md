@@ -1,0 +1,2 @@
+# Program (on Python) for downloading information about the largest government contracts using libraries Requests, Jinja2.
+# Transferring the received information to the email list of recipients from the email address of the sender who provided the code for two-factor identification gmail.com.
