@@ -7,7 +7,7 @@ import smtplib, ssl
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.message import EmailMessage
-from Config import SENDER_EMAIL, EMAIL_PASSWORD
+from Config import SENDER_EMAIL, EMAIL_PASSWORD, PATH_FOR_TABLE
 
 logging.basicConfig(filename = 'test_log.log', level = logging.DEBUG,
                     format = '%(asctime)s %(levelname)s %(funcName)s || %(message)s')
@@ -121,7 +121,7 @@ def create_message(top_contracts):
 
     template = env.get_template('table.html')
     message = template.render(items=top_contracts)
-    with open('/Users/Elena/Desktop/Учеба/Contracts_to_email/my_table.html', 'w', encoding='UTF-8') as a:
+    with open(PATH_FOR_TABLE, 'w', encoding='UTF-8') as a:
         a.write(message)
     return message
 
